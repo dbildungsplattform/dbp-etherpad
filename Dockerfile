@@ -1,4 +1,4 @@
-FROM etherpad/etherpad:3.3.11
+FROM etherpad/etherpad:3.3.16
 # Specify the plugins to install
 ARG ETHERPAD_PLUGINS="ep_mathjax"
 RUN pnpm run plugins i ${ETHERPAD_PLUGINS}
