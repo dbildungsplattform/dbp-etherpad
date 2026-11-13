@@ -13,6 +13,6 @@ jobs:
       contents: read
       packages: write
       security-events: write
-    uses: hpi-schul-cloud/infra-tools/.github/workflows/imagetoghcr-on-push.yaml@main
+    uses: hpi-schul-cloud/infra-tools/.github/workflows/imagetoghcr-on-push.yaml@9427df6b6015b8f6dc3b0c1142ffe35dfd4b1e0f # main
     with:
       image_name: "etherpad"
