@@ -24,9 +24,9 @@ jobs:
       actions: read
       contents: read
     needs: pre_build
-    uses: hpi-schul-cloud/infra-tools/.github/workflows/build-and-push.yaml@9427df6b6015b8f6dc3b0c1142ffe35dfd4b1e0f # main
+    uses: dbildungsplattform/dbp-github-workflows/.github/workflows/image-publish-trivy.yaml@ac540af7a37263a102c7bc6c8c9447a7b176f027 # 8.6.0
     with:
-      registry: ghcr.io
-      image: dbildungsplattform/etherpad
-      tag: ${{ needs.pre_build.outputs.tag }}
-      suffix: ${{ needs.pre_build.outputs.suffix }}
+      container_registry: "ghcr.io"
+      image_name: "etherpad"
+      image_tag_generation: "specified,mm_git_tag"
+      image_tag: "${{ needs.pre_build.outputs.tag }}${{ needs.pre_build.outputs.suffix }}"
