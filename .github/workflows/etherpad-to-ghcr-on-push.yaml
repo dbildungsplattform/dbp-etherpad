@@ -13,6 +13,8 @@ jobs:
       contents: read
       packages: write
       security-events: write
-    uses: hpi-schul-cloud/infra-tools/.github/workflows/imagetoghcr-on-push.yaml@main
+    uses: dbildungsplattform/dbp-github-workflows/.github/workflows/image-publish-trivy.yaml@ac540af7a37263a102c7bc6c8c9447a7b176f027 # 8.6.0
     with:
       image_name: "etherpad"
+      image_tag_generation: "ticket_from_branch"
+      container_registry: "ghcr.io"
